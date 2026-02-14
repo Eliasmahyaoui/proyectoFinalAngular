@@ -42,7 +42,8 @@
 
     <div class="botones">
       <button (click)="cambiarEstado(plato)">{{ plato.enabled ? 'Deshabilitar' : 'Habilitar' }}</button>
-      <button (click)="eliminarPlato(plato)">Eliminar</button>
+      <button (click)="eliminar(plato.id)">Eliminar</button>
+
     </div>
   </div>
 </div>

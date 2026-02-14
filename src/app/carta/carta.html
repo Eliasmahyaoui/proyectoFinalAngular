@@ -18,10 +18,12 @@
 
 
 <div class="platos" [ngClass]="clasesUsabilidad">
-  <div class="plato"
-       *ngFor="let plato of platos | categoria:categoriaSeleccionada | ordenPrecio:ordenSeleccionado">
+  <div *ngFor="let plato of platos">
+  <div *ngIf="plato.enabled" class="plato">
     <img [src]="plato.image" alt="{{plato.name}}" width="200">
     <h3>{{ plato.name }}</h3>
     <p>{{ plato.price | currency:'EUR' }}</p>
   </div>
+</div>
+
 </div>
