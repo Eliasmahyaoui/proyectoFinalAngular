@@ -1,5 +1,27 @@
-<div *ngFor=" let plato of platos">
 
-  
+<div class="usabilidad-widget">
+  <h3>Opciones de accesibilidad</h3>
+  <div class="botones">
 
+    <button (click)="toggleTextoGrande()">Texto grande</button>
+    <button (click)="toggleInterlineado()">Más espacio entre líneas</button>
+
+
+    <button (click)="toggleAltoContraste()">Alto contraste</button>
+    <button (click)="toggleEscalaGrises()">Escala de grises</button>
+
+
+    <button (click)="toggleResaltarEnlaces()">Resaltar enlaces</button>
+    <button (click)="toggleMascarillaLectura()">Máscara de lectura</button>
+  </div>
+</div>
+
+
+<div class="platos" [ngClass]="clasesUsabilidad">
+  <div class="plato"
+       *ngFor="let plato of platos | categoria:categoriaSeleccionada | ordenPrecio:ordenSeleccionado">
+    <img [src]="plato.image" alt="{{plato.name}}" width="200">
+    <h3>{{ plato.name }}</h3>
+    <p>{{ plato.price | currency:'EUR' }}</p>
+  </div>
 </div>

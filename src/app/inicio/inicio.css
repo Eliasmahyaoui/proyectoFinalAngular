@@ -2,19 +2,3 @@
   text-align: center;
   padding: 50px;
 }
-
-.inicio img {
-  width: 300px;
-  border-radius: 10px;
-}
-
-.inicio h1 {
-  margin-top: 20px;
-  font-size: 2em;
-}
-
-.inicio p {
-  margin-top: 10px;
-  font-size: 1.2em;
-  color: #555;
-}

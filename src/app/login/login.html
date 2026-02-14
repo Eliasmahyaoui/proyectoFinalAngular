@@ -1,12 +1,18 @@
-<form action="">
+<div class="login-container">
+  <h2>Iniciar Sesión</h2>
 
-  <label class="col-form-label col-sm-2 text-sm-right" for="filterDesc">Filtro:</label>
-  <div class="col-sm-5">
-    <input type="text" [(ngModel)]="filterSearch" name="filterDesc" placeholder="Filtro" />
+  <div class="formulario-login">
+    <input type="text" placeholder="Usuario"
+           [(ngModel)]="username"
+           maxlength="50"
+           required>
+    <input type="password" placeholder="Contraseña"
+           [(ngModel)]="password"
+           maxlength="50"
+           required>
+    <button (click)="iniciarSesion()"
+            [disabled]="!username || !password">Entrar</button>
   </div>
 
-  <label class="col-form-label col-sm-5"> Filtrando por: {{ filterSearch}}</label>
-
-
-
-</form>
+  <p class="error" *ngIf="error">{{ error }}</p>
+</div>

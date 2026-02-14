@@ -1,0 +1,98 @@
+/* gestion.css */
+
+.titulo-gestion {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #333;
+}
+
+/* Filtros */
+.filtros {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.filtros select {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+/* Formulario de creación */
+.formulario-crear {
+  max-width: 800px;
+  margin: 0 auto 30px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.formulario-crear input,
+.formulario-crear select {
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.formulario-crear button {
+  padding: 8px 15px;
+  border-radius: 6px;
+  border: none;
+  background-color: #f2c94c;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.formulario-crear button:hover {
+  background-color: #e0b63c;
+}
+
+/* Grid de platos */
+.platos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Tarjetas de plato */
+.plato {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.plato:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Botones de acción */
+.botones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.botones button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: #f2c94c;
+}
+
+.botones button:hover {
+  background-color: #e0b63c;
+}

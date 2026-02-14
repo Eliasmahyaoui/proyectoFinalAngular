@@ -1,6 +1,4 @@
 
-
-
 export interface Plato {
   id: number,
   name: string,
@@ -12,14 +10,7 @@ export interface Plato {
 
 }
 
-export interface Usuario {
-  id: number;
-  username: string;
-  password: string;
-  email: string;
-  role: 'user' | 'chef';
 
-}
 
 
 

@@ -1,9 +1,48 @@
-<form action="">
-<label for=""> <strong>Crear platos: </strong></label><br>
-<input type="text">
-<br><br>
+<h2 class="titulo-gestion">Gestión de Platos</h2>
 
-<label for=""><strong>Modificar platos:</strong></label><br>
-<input type="text">
+<div class="filtros">
+  <select [(ngModel)]="categoriaSeleccionada">
+    <option value="Todos">Todos</option>
+    <option value="entrantes">Entrantes</option>
+    <option value="platos principales">Platos principales</option>
+    <option value="postres">Postres</option>
+    <option value="bebidas">Bebidas</option>
+  </select>
 
-</form>
+  <select [(ngModel)]="ordenSeleccionado">
+    <option value="">Sin ordenar</option>
+    <option value="asc">Precio menor a mayor</option>
+    <option value="desc">Precio mayor a menor</option>
+  </select>
+</div>
+
+
+<div class="formulario-crear">
+  <h3>Crear nuevo plato</h3>
+  <input type="text" placeholder="Nombre" [(ngModel)]="nuevoPlato.name">
+  <input type="text" placeholder="Descripción" [(ngModel)]="nuevoPlato.description">
+  <input type="number" placeholder="Precio" [(ngModel)]="nuevoPlato.price">
+  <select [(ngModel)]="nuevoPlato.category">
+    <option value="entrantes">Entrantes</option>
+    <option value="platos principales">Platos principales</option>
+    <option value="postres">Postres</option>
+    <option value="bebidas">Bebidas</option>
+  </select>
+  <button (click)="crearPlato()">Crear</button>
+</div>
+
+
+<div class="platos">
+  <div class="plato" *ngFor="let plato of platos | categoria:categoriaSeleccionada | ordenPrecio:ordenSeleccionado">
+    <img [src]="plato.image" alt="{{plato.name}}" width="200">
+    <h3>{{ plato.name }}</h3>
+    <p>{{ plato.description }}</p>
+    <p>{{ plato.price | currency:'EUR' }}</p>
+    <p>Status: <strong>{{ plato.enabled ? 'Activo' : 'Deshabilitado' }}</strong></p>
+
+    <div class="botones">
+      <button (click)="cambiarEstado(plato)">{{ plato.enabled ? 'Deshabilitar' : 'Habilitar' }}</button>
+      <button (click)="eliminarPlato(plato)">Eliminar</button>
+    </div>
+  </div>
+</div>
