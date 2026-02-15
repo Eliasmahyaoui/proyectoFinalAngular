@@ -1,21 +1,21 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './navbar/navbar';
-import { CommonModule } from '@angular/common'; // IMPORTAR
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [Navbar, RouterOutlet, CommonModule], // AÑADIDO CommonModule
+  imports: [Navbar, RouterOutlet, CommonModule],
   template: `
     <app-navbar></app-navbar>
 
-    <!-- BOTÓN FLOTANTE -->
+
     <button class="access-btn" (click)="toggleMenu()">
       ♿
     </button>
 
-    <!-- PANEL -->
+    
     <div class="usability-widget" *ngIf="menuAbierto">
   <h4>Accesibilidad</h4>
 

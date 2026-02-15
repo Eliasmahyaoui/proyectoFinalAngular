@@ -44,7 +44,6 @@
 }
 
 
-/* BOTÓN FLOTANTE */
 .access-btn {
   position: fixed;
   top: 100px;
@@ -61,7 +60,7 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* PANEL */
+
 .usability-widget {
   position: fixed;
   top: 170px;
