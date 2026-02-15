@@ -1,6 +1,27 @@
 <app-navbar></app-navbar>
 <router-outlet></router-outlet>
 
+<div class="usability-widget">
+  <h4>Accesibilidad</h4>
+
+
+  <button (click)="toggleTextoGrande()">Aumentar texto</button>
+  <button (click)="toggleInterlineado()">Interlineado</button>
+
+
+  <button (click)="toggleContraste()">Alto contraste</button>
+  <button (click)="toggleGrises()">Escala grises</button>
+
+  
+  <button (click)="toggleResaltarEnlaces()">Resaltar enlaces</button>
+  <button (click)="toggleEnfoque()">Enfoque contorno</button>
+</div>
+
+<router-outlet></router-outlet>
+
+<router-outlet></router-outlet>
+
+
 
 
 

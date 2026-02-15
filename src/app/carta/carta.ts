@@ -26,19 +26,5 @@ ngOnInit() {
 }
 
 
-
-  // Este objeto lo que hace es controlar las q estan activadas
-  clasesUsabilidad: Record<string, boolean> = {};
-
-  toggleClase(clase: string) {
-    this.clasesUsabilidad[clase] = !this.clasesUsabilidad[clase];
-  }
-
-  toggleTextoGrande() { this.toggleClase('texto-grande'); }
-  toggleInterlineado() { this.toggleClase('interlineado'); }
-  toggleAltoContraste() { this.toggleClase('alto-contraste'); }
-  toggleEscalaGrises() { this.toggleClase('escala-grises'); }
-  toggleResaltarEnlaces() { this.toggleClase('resaltar-enlaces'); }
-  toggleMascarillaLectura() { this.toggleClase('mascarilla-lectura'); }
 }
 
